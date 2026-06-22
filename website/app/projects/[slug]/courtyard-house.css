@@ -1,0 +1,191 @@
+/* ── PROJECT DETAIL: THE COURTYARD HOUSE ─────────────────────────── */
+
+.project-detail {
+  background: var(--color-background);
+}
+
+/* ── NOTICE ──────────────────────────────────────────────────────── */
+
+.pd-notice {
+  font-family: var(--font-headline);
+  font-size: var(--type-ui-size);
+  font-weight: var(--font-weight-ui);
+  letter-spacing: var(--type-ui-tracking);
+  line-height: var(--type-ui-leading);
+  color: var(--color-secondary);
+  text-align: center;
+  padding: var(--space-4) var(--container-pad);
+}
+
+/* ── HERO ────────────────────────────────────────────────────────── */
+
+.pd-hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .pd-hero {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* ── PROJECT META ────────────────────────────────────────────────── */
+
+.pd-meta {
+  padding: var(--space-6) var(--container-pad) var(--space-5);
+}
+
+.pd-meta-title {
+  font-family: var(--font-headline);
+  font-size: var(--type-headline-size);
+  font-weight: var(--font-weight-headline);
+  letter-spacing: var(--type-headline-tracking);
+  line-height: var(--type-headline-leading);
+  color: var(--color-primary);
+  margin: 0 0 var(--space-3) 0;
+}
+
+.pd-meta-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.pd-meta-line {
+  font-family: var(--font-body);
+  font-size: var(--type-body-size);
+  font-weight: var(--font-weight-body);
+  line-height: var(--type-body-leading);
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+/* ── CONTENT BODY ────────────────────────────────────────────────── */
+
+.pd-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* ── FULL-WIDTH IMAGES ───────────────────────────────────────────── */
+
+.pd-image-full {
+  position: relative;
+  margin-left: var(--container-pad);
+  margin-right: var(--container-pad);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  max-height: 100vh;
+}
+
+/* aspect-ratio variants */
+.pd-image-full--portrait {
+  aspect-ratio: 3 / 4;
+}
+
+.pd-image-full--wide {
+  aspect-ratio: 16 / 9;
+}
+
+/* width variants — desktop only, mobile always full width */
+@media (min-width: 768px) {
+  .pd-image-full--sm { width: 45%; }
+  .pd-image-full--md { width: 65%; }
+  .pd-image-full--lg { width: 80%; }
+}
+
+.pd-image-img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ── SECTION TEXT ────────────────────────────────────────────────── */
+
+.pd-section-text {
+  padding: 0 var(--container-pad);
+}
+
+.pd-section-label {
+  font-family: var(--font-headline);
+  font-size: var(--type-strip-size);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--type-strip-tracking);
+  color: var(--color-primary);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.pd-section-body {
+  font-family: var(--font-body);
+  font-size: var(--type-body-size);
+  font-weight: var(--font-weight-body);
+  line-height: var(--type-body-leading);
+  letter-spacing: var(--type-body-tracking);
+  color: var(--color-primary);
+  margin: 0;
+  max-width: 680px;
+}
+
+/* ── AWARDS ──────────────────────────────────────────────────────── */
+
+.pd-awards {
+  padding: var(--space-6) var(--container-pad) var(--space-10);
+}
+
+.pd-awards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+}
+
+.pd-award-title {
+  font-family: var(--font-headline);
+  font-size: var(--type-awards-size);
+  font-weight: var(--font-weight-headline);
+  letter-spacing: var(--type-headline-tracking);
+  line-height: 1.1;
+  color: var(--color-primary);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.pd-award-detail {
+  font-family: var(--font-body);
+  font-size: var(--type-body-size);
+  font-weight: var(--font-weight-body);
+  line-height: var(--type-body-leading);
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .pd-meta-title {
+    font-size: clamp(2rem, 10vw, 3.5rem);
+  }
+
+  .pd-section-text {
+    text-align: center;
+  }
+
+  .pd-section-body {
+    max-width: 100%;
+  }
+
+  .pd-awards-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+  }
+
+  .pd-award-title {
+    font-size: clamp(1.1rem, 5vw, 1.75rem);
+  }
+
+  .pd-award-detail {
+    font-size: var(--type-strip-size);
+  }
+}

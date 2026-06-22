@@ -1,0 +1,145 @@
+/* ── PROJECTS PAGE ───────────────────────────────────────────────── */
+
+.projects-page {
+  background: var(--color-background);
+  min-height: 100svh;
+}
+
+/* ── FILTER BAR ──────────────────────────────────────────────────── */
+
+.projects-controls {
+  padding: var(--space-4) var(--container-pad);
+}
+
+.projects-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-btn {
+  font-family: var(--font-headline);
+  font-size: var(--type-strip-size);
+  font-weight: 400;
+  letter-spacing: var(--type-ui-tracking);
+  text-transform: uppercase;
+  padding: 10px var(--space-3);
+  border: 1px solid var(--color-primary);
+  background: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.filter-btn--active {
+  background: var(--color-accent);
+  color: var(--color-background);
+  border-color: var(--color-accent);
+}
+
+.filter-btn:not(.filter-btn--active):hover {
+  background: var(--color-accent);
+  color: var(--color-background);
+  border-color: var(--color-accent);
+}
+
+/* ── MASONRY GRID ────────────────────────────────────────────────── */
+
+.projects-masonry {
+  columns: 2;
+  column-gap: 8px;
+  padding: var(--space-4) var(--container-pad) var(--space-8);
+}
+
+.project-card {
+  display: block;
+  break-inside: avoid;
+  margin-bottom: 8px;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+/* ── PROJECT IMAGE ───────────────────────────────────────────────── */
+
+.project-card-image {
+  position: relative;
+  width: 100%;
+}
+
+.project-card-image--landscape {
+  aspect-ratio: 3 / 2;
+}
+
+.project-card-image--portrait {
+  aspect-ratio: 2 / 3;
+}
+
+.project-card-img {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-card-img {
+  transform: scale(1.03);
+}
+
+/* ── HOVER OVERLAY ───────────────────────────────────────────────── */
+
+.project-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+  padding: 0 0 var(--space-2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-card-overlay {
+  opacity: 1;
+}
+
+.project-card-name {
+  font-family: var(--font-headline);
+  font-size: var(--type-body-size);
+  font-weight: 400;
+  color: var(--color-background);
+  background: var(--color-accent);
+  margin: 0;
+  padding: var(--space-1) var(--space-3);
+  display: inline-block;
+  line-height: 1.3;
+}
+
+.project-card-category {
+  font-family: var(--font-headline);
+  font-size: var(--type-body-size);
+  font-weight: 400;
+  color: var(--color-background);
+  background: var(--color-accent);
+  margin: 0;
+  padding: var(--space-1) var(--space-3);
+  display: inline-block;
+  line-height: 1.3;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .projects-masonry {
+    columns: 1;
+  }
+
+  .filter-btn {
+    font-size: var(--type-caption-size, 11px);
+    padding: 7px var(--space-2);
+  }
+}

@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-background: #F5F0EA;
+  --color-primary:    #1C1814;
+  --color-secondary:  #6B5E52;
+  --color-accent:     #A0522D;
+
+  /* Font families */
+  --font-headline: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body:     'Playfair Display', serif;
+
+  /* Zero border radius throughout */
+  --radius:     0px;
+  --radius-sm:  0px;
+  --radius-md:  0px;
+  --radius-lg:  0px;
+  --radius-xl:  0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-full: 0px;
+
+  /* Layout */
+  --container-pad: clamp(24px, 5vw, 64px);
+  --container-max: 1280px;
+
+  /* Section vertical padding */
+  --section-pad-sm: clamp(48px, 6vw, 80px);
+  --section-pad-md: clamp(64px, 8vw, 128px);
+  --section-pad-lg: clamp(80px, 10vw, 160px);
+
+  /* 8pt spacing scale */
+  --space-1:  8px;
+  --space-2:  16px;
+  --space-3:  24px;
+  --space-4:  32px;
+  --space-5:  40px;
+  --space-6:  48px;
+  --space-8:  64px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-16: 128px;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  overscroll-behavior: none;
+}
+
+html {
+  font-size: 16px;
+  overscroll-behavior: none;
+}
+
+:root {
+  /* Size */
+  --type-headline-size:    clamp(2.5rem, 5.34vw + 0.56rem, 6rem);
+  --type-awards-size:      clamp(2rem, 2.87vw + 0.62rem, 3rem);
+  --type-awards-name-size: clamp(2.5rem, 1.11vw + 2.15rem, 3rem);
+  --type-subheadline-size: clamp(1.25rem, 1.15vw + 0.8rem, 2rem);
+  --type-body-size:        clamp(1rem, 0.38vw + 0.85rem, 1.25rem);
+  --type-body-mobile-size:  clamp(1.05rem, 3.75vw, 1.3rem);
+  --type-item-heading-size: clamp(1.5rem, 5vw, 2rem);
+  --type-strip-size:       0.8125rem;
+  --type-ui-size:          1rem;
+
+  /* Tracking (letter-spacing) */
+  --type-headline-tracking:    -0.02em;
+  --type-subheadline-tracking: 0;
+  --type-body-tracking:        0.01em;
+  --type-ui-tracking:          0.08em;
+  --type-strip-tracking:       0.1em;
+
+  /* Leading (line-height) */
+  --type-headline-leading:    1.1;
+  --type-subheadline-leading: 1.3;
+  --type-body-leading:        1.7;
+  --type-ui-leading:          1.4;
+
+  --font-weight-headline: 700;
+  --font-weight-subheadline: 400;
+  --font-weight-body: 300;
+  --font-weight-ui: 400;
+  --font-weight-strip: 300;
+}
